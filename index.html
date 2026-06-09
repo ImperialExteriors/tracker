@@ -296,7 +296,7 @@ input.pin:focus{border-color:var(--purple);}
 </div>
 
 <script>
-var API="https://script.google.com/macros/s/AKfycbwQ6U-L9OcWLd1E1zfHzSGrDgQAP8WJbYa4cCoB_2Yj8ERC9wxsgMUYxz1lQFhzVzU/exec";
+var API="https://script.google.com/macros/s/AKfycbzaZ8pTxlQMCFISiPy3_4amChD9F_C4Zv5Dli_IB50eYX6cgtDgW7DDC4CEC0AVUYJz/exec";
 
 var STAGES=[
   {key:'doors',       name:'Doors Knocked',  goal:80,  color:'#6B3FA0',dim:'#f0eaf8',icon:'&#128682;'},
@@ -324,9 +324,7 @@ var rep='', isMgr=false, counts={doors:0,convos:0,inspections:0,claims:0}, pollT
 /* ── dates ── */
 function today(){return new Date().toISOString().slice(0,10);}
 function weekKey(){
-  var d=new Date(),day=d.getDay(),mon=new Date(d);
-  mon.setDate(d.getDate()-(day===0?6:day-1));
-  return mon.toISOString().slice(0,10);
+  return today();
 }
 function weekDates(){
   var mon=new Date(weekKey()+'T12:00:00Z'),out=[];
